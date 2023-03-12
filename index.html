@@ -81,11 +81,14 @@
           </div>
         </article>
         <form class="form">
-          <label class="form__label"
-            >Ваше имя:<input class="form__input_name" type="text"
-          /></label>
-          <label class="form__label"
-            >Текст коментария:<textarea class="form__input_text"></textarea>
+          <label class="form__label">
+            Ваше имя:
+            <input class="form__input_name" type="text" />
+            <span class="errorName"></span>
+          </label>
+          <label class="form__label">
+            Текст коментария:<textarea class="form__input_text"></textarea>
+            <span class="errorText"></span>
           </label>
           <div class="form__actions">
             <button class="form__actions_send">Опубликовать</button
@@ -93,6 +96,7 @@
           </div>
         </form>
       </div>
+      <script src="/script.js"></script>
     </main>
   </body>
 </html>
