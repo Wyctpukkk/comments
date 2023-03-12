@@ -1,0 +1,140 @@
+@import url(/css/resetstyle.css);
+body {
+  background-color: #f0f2f5;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.post {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+.post__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 10px 0 30px 0;
+}
+.post__desc {
+  line-height: 20px;
+  margin: 30px 0px 30px 0px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 25px;
+  margin-top: 50px;
+  padding: 30px;
+}
+.comments__item {
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.comments__name {
+  text-align: end;
+  opacity: 0.5;
+}
+.comments__text {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: justify;
+  margin: 20px 0 20px 0;
+}
+.comments__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comments__date {
+  opacity: 0.5;
+  font-size: 12px;
+}
+.comments__btn_like {
+  background: none;
+}
+.comments__btn_like img {
+  width: 20px;
+  height: 20px;
+}
+.comments__btn_delete {
+  background: none;
+}
+.comments__btn_delete img {
+  width: 20px;
+  height: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  margin-top: 50px;
+  padding: 30px;
+}
+.form__label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.form__input_name {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  width: 300px;
+  margin: 10px 0px 10px 0px;
+}
+.form__input_text {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  min-height: 100px;
+  margin: 10px 0px 10px 0px;
+  resize: none;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.form__actions_send {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(104, 104, 104, 0.1);
+}
+.form__actions_date {
+  cursor: pointer;
+  margin-left: 20px;
+  background-color: rgba(104, 104, 104, 0.1);
+  font-size: 14px;
+  padding: 9px;
+  border-radius: 5px;
+}
+
+.errorName {
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  font-size: 12px;
+  color: red;
+}
+
+.errorText {
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  font-size: 12px;
+  color: red;
+}/*# sourceMappingURL=style.css.map */
