@@ -58,18 +58,25 @@ body {
   }
   &__btn {
     &_like {
-      background: none;
-      img {
+      background-image: url(/img/heart-empty.svg);
+      width: 20px;
+      height: 22px;
+      background-size: contain;
+      background-color: unset;
+      &.active {
+        background-image: url(/img/heart-fill.svg);
         width: 20px;
-        height: 20px;
+        height: 22px;
+        background-size: contain;
+        background-color: unset;
       }
     }
     &_delete {
-      background: none;
-      img {
-        width: 20px;
-        height: 20px;
-      }
+      background-image: url(/img/remove.svg);
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      background-color: unset;
     }
   }
 }

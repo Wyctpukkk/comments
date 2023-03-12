@@ -60,18 +60,25 @@ body {
   font-size: 12px;
 }
 .comments__btn_like {
-  background: none;
-}
-.comments__btn_like img {
+  background-image: url(/img/heart-empty.svg);
   width: 20px;
-  height: 20px;
+  height: 22px;
+  background-size: contain;
+  background-color: unset;
+}
+.comments__btn_like.active {
+  background-image: url(/img/heart-fill.svg);
+  width: 20px;
+  height: 22px;
+  background-size: contain;
+  background-color: unset;
 }
 .comments__btn_delete {
-  background: none;
-}
-.comments__btn_delete img {
-  width: 20px;
-  height: 20px;
+  background-image: url(/img/remove.svg);
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+  background-color: unset;
 }
 
 .form {
