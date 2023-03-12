@@ -73,7 +73,9 @@ function addLike() {
     obj.addEventListener('click', (e) => e.target.classList.toggle('active'));
   });
   btnDelete.map((obj, _) => {
-    obj.addEventListener('click', (e) => console.log(e));
+    obj.addEventListener('click', (e) =>
+      e.target.parentNode.parentNode.parentNode.parentNode.remove()
+    );
   });
   console.log(btnLike);
 }
