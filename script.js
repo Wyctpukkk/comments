@@ -9,9 +9,10 @@ const commentsList = document.querySelector('.comments');
 let name;
 let text;
 let d = new Date();
-let date = `Сегодня в ${
+const currentTimeString = `${
   d.getHours() < 10 ? `0${d.getHours()}` : d.getHours()
 }:${d.getMinutes() < 10 ? `0${d.getMinutes()}` : d.getMinutes()}`;
+let date = `Сегодня в ${currentTimeString}`;
 
 const regexpName = /^[а-я]/;
 
@@ -42,26 +43,20 @@ function validatorText(value) {
 }
 
 function setDate(value) {
-  let today = todayDate();
-  let yesterday = yesterdayDate();
-  let d = new Date();
+  let today = getDate();
+  let yesterday = getDate(-1);
   if (new Date(today).getTime() == new Date(value).getTime()) {
-    date = `Сегодня в ${
-      d.getHours() < 10 ? `0${d.getHours()}` : d.getHours()
-    }:${d.getMinutes() < 10 ? `0${d.getMinutes()}` : d.getMinutes()}`;
+    date = `Сегодня в ${currentTimeString}`;
   } else if (new Date(yesterday).getTime() == new Date(value).getTime()) {
-    date = `Вчера в ${d.getHours() < 10 ? `0${d.getHours()}` : d.getHours()}:${
-      d.getMinutes() < 10 ? `0${d.getMinutes()}` : d.getMinutes()
-    }`;
+    date = `Вчера в ${currentTimeString}`;
   } else {
-    date = `${value} в ${
-      d.getHours() < 10 ? `0${d.getHours()}` : d.getHours()
-    }:${d.getMinutes() < 10 ? `0${d.getMinutes()}` : d.getMinutes()}`;
+    date = `${value} в ${currentTimeString}`;
   }
 }
 
-function todayDate() {
+function getDate(count = 0) {
   let d = new Date();
+  d.setDate(d.getDate() + count);
   let year = d.getFullYear();
   let month =
     d.getMonth() + 1 < 10
@@ -71,17 +66,18 @@ function todayDate() {
   return year + '-' + month + '-' + day;
 }
 
-function yesterdayDate() {
-  let d = new Date();
-  d.setDate(d.getDate() - 1);
-  let year = d.getFullYear();
-  let month =
-    d.getMonth() + 1 < 10
-      ? '0' + String(d.getMonth() + 1)
-      : String(d.getMonth() + 1);
-  let day = d.getDate() < 10 ? '0' + String(d.getDate()) : String(d.getDate());
-  return year + '-' + month + '-' + day;
+function addLike() {
+  btnLike = [...document.querySelectorAll('.comments__btn_like')];
+  btnDelete = [...document.querySelectorAll('.comments__btn_delete')];
+  btnLike.map((obj, _) => {
+    obj.addEventListener('click', (e) => e.target.classList.toggle('active'));
+  });
+  btnDelete.map((obj, _) => {
+    obj.addEventListener('click', (e) => console.log(e));
+  });
+  console.log(btnLike);
 }
+addLike();
 
 function createComment(e) {
   e.preventDefault();
@@ -105,10 +101,11 @@ function createComment(e) {
   } else {
     console.log('валидация не пройдена');
   }
+  addLike();
+  clearInputs();
+}
 
-  [...btnLike] = document.querySelectorAll('.comments__btn_like');
-  [...btnDelete] = document.querySelectorAll('.comments__btn_delete');
-  btnLike.map((obj, _) => {
-    obj.addEventListener('click', (e) => e.target.classList.toggle('active'));
-  });
+function clearInputs() {
+  inputName.value = '';
+  inputText.value = '';
 }
