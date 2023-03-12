@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blog</title>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <section class="post">
+          <h1 class="post__title">Что такое TypeScript?</h1>
+          <p class="post__desc">
+            TypeScript — язык программирования, представленный Microsoft в 2012
+            году и позиционируемый как средство разработки веб-приложений,
+            расширяющее возможности JavaScript
+          </p>
+          <p class="post__desc">
+            Разработчиком языка TypeScript является Андерс Хейлсберг, создавший
+            ранее Turbo Pascal, Delphi и C#.
+          </p>
+          <p class="post__desc">
+            TypeScript является обратно совместимым с JavaScript и компилируется
+            в последний. Фактически, после компиляции программу на TypeScript
+            можно выполнять в любом современном браузере или использовать
+            совместно с серверной платформой Node.js. Код экспериментального
+            компилятора, транслирующего TypeScript в JavaScript,
+            распространяется под лицензией Apache. Его разработка ведётся в
+            публичном репозитории через сервис GitHub[10].
+          </p>
+          <p class="post__desc">
+            TypeScript отличается от JavaScript возможностью явного статического
+            назначения типов, поддержкой использования полноценных классов (как
+            в традиционных объектно-ориентированных языках), а также поддержкой
+            подключения модулей, что призвано повысить скорость разработки,
+            облегчить читаемость, рефакторинг и повторное использование кода,
+            помочь осуществлять поиск ошибок на этапе разработки и компиляции,
+            и, возможно, ускорить выполнение программ.
+          </p>
+          <p class="post__desc">
+            Планируется, что в силу полной обратной совместимости адаптация
+            существующих приложений на новый язык программирования может
+            происходить поэтапно, путём постепенного определения типов.
+          </p>
+        </section>
+        <article class="comments">
+          <div class="comments__item">
+            <p class="comments__name">Имя</p>
+            <p class="comments__text">
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+              вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
+              на латинице с начала XVI века. В то время некий безымянный
+              печатник создал большую коллекцию размеров и форм шрифтов,
+              используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не
+              только успешно пережил без заметных изменений пять веков, но и
+              перешагнул в электронный дизайн. Его популяризации в новое время
+              послужили публикация листов Letraset с образцами Lorem Ipsum в
+              60-х годах и, в более недавнее время, программы электронной
+              вёрстки типа Aldus PageMaker, в шаблонах которых используется
+              Lorem Ipsum.
+            </p>
+            <div class="comments__actions">
+              <p class="comments__date">Дата</p>
+              <div class="comments__btn">
+                <button class="comments__btn_like">
+                  <img src="/img/heart-empty.svg" alt="like" />
+                </button>
+                <button class="comments__btn_delete">
+                  <img src="/img/remove.svg" alt="delete" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <form class="form">
+          <label class="form__label"
+            >Ваше имя:<input class="form__input_name" type="text"
+          /></label>
+          <label class="form__label"
+            >Текст коментария:<textarea class="form__input_text"></textarea>
+          </label>
+          <div class="form__actions">
+            <button class="form__actions_send">Опубликовать</button
+            ><input class="form__actions_date" type="date" />
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
