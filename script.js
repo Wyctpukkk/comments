@@ -140,4 +140,5 @@ function createComment(e) {
 function clearInputs() {
   inputName.value = '';
   inputText.value = '';
+  inputDate.value = '';
 }
